@@ -3,7 +3,12 @@ var input = [
   { x: 12, y: 5 },
   { x: 8, y: 15 }
 ];
-var result = input.map(i => Math.sqrt(Math.pow(i.x, 2) + Math.pow(i.y, 2)));
+var result = input.map(i => pythag(i.x, i.y));
+
+function pythag(x, y) {
+  let z = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+  return z;
+}
 
 console.log(result[0] === 5);
 console.log(result[1] === 13);
